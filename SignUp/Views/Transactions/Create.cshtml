@@ -53,7 +53,7 @@
                                 </select>
                             </td>
                             <td>
-                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="itemQty" ng-change="btnDisable();" title="Item QTY" placeholder="Item QTY" />
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="number" name="name" ng-model="itemQty" ng-change="btnDisable();" title="Item QTY" placeholder="Item QTY" />
                             </td>
                         </tr>
 
@@ -112,10 +112,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input class="form-control form-control-sm  mb-3" ng-disabled="disableVat" style="width: 100%;" type="text" name="name" ng-model="Transaction.TransVat" ng-change="CalculetionForVat();" title="Vat (Tk/%)" placeholder="Vat (Tk/%)" />
+                                    <input class="form-control form-control-sm  mb-3" ng-disabled="disableVat" style="width: 100%;" type="number" name="name" ng-model="Transaction.TransVat" ng-change="CalculetionForVat();" title="Vat (Tk/%)" placeholder="Vat (Tk/%)" />
                                 </td>
                                 <td>
-                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.TransDiscount" ng-change="CalculetionForDiscount();" title="Discount (Tk)" placeholder="Discount (Tk)" />
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="number" name="name" ng-model="Transaction.TransDiscount" ng-change="CalculetionForDiscount();" title="Discount (Tk)" placeholder="Discount (Tk)" />
                                 </td>
                                 <td>
                                     <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.TotalAmount" title="Total Amount" placeholder="Total Amount" readonly />
@@ -135,7 +135,7 @@
                                     <select class="form-control form-control-sm  mb-3" ng-model="ddlBankDetail" ng-show="PaymentType == 1" ng-options="bank.BankAccountNo for bank in BankDetailList track by bank.BankId " ng-change="Transaction.BankId = ddlBankDetail.BankId; Transaction.BankName = ddlBankDetail.BankName; Transaction.BankAccountNo = ddlBankDetail.BankAccountNo">
                                         <option value="">--Select Bank--</option>
                                     </select>
-                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.TenderedAmount" ng-change="changedAmountCal();" ng-show="PaymentType == 2" title="Tendered Amount" placeholder="Tendered Amount" />
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="number" name="name" ng-model="Transaction.TenderedAmount" ng-change="changedAmountCal();" ng-show="PaymentType == 2" title="Tendered Amount" placeholder="Tendered Amount" />
                                 </td>
                                 <td>
                                     <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.BankName" ng-show="PaymentType == 1" title="Bank Name" placeholder="Bank Name" readonly />
