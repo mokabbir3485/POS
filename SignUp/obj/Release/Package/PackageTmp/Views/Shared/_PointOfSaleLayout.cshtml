@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="~/web/img/logo/logo.png" rel="icon">
+    <title>Dashboard - Point Of Sale</title>
+    <link href="~/web/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/web/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/web/css/ruang-admin.min.css" rel="stylesheet">
+    @RenderSection("style", required: false)
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-light accordion hidden-print" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Home/Index">
+                <div class="sidebar-brand-icon">
+                    @*<img src="~/web/img/logo/logo2.png">*@
+                </div>
+                <div class="sidebar-brand-text mx-3">Neemkuni</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/Home/Index">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Users
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true"
+                   aria-controls="collapsePage">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Manage Users</span>
+                </a>
+                <div id="collapseUser" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Users/Index">User List</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Inventory
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-store-alt"></i>
+                    <span>Manage Company</span>
+                </a>
+                <div id="collapseCompany" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Companies/Create">Company Entry</a>
+                        <a class="collapse-item" href="/Companies/Index">Company List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Manage Suppliers</span>
+                </a>
+                <div id="collapseSupplier" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Suppliers/Create">Supplier Entry</a>
+                        <a class="collapse-item" href="/Suppliers/Index">Supplier List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-address-card"></i>
+                    <span>Manage Customer</span>
+                </a>
+                <div id="collapseCustomer" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Customers/Create">Customer Entry</a>
+                        <a class="collapse-item" href="/Customers/Index">Customer List</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategory"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Manage Category</span>
+                </a>
+                <div id="collapseCategory" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Categorys/Create">Category Entry</a>
+                        <a class="collapse-item" href="/Categorys/Index">Category List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-utensils"></i>
+                    <span>Manage Product</span>
+                </a>
+                <div id="collapseProduct" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Products/Create">Product Entry</a>
+                        <a class="collapse-item" href="/Products/Index">Product List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDamagedProduct"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-trash-alt"></i>
+                    <span>Manage Damaged</span>
+                </a>
+                <div id="collapseDamagedProduct" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/DamagedProducts/Create">Damaged Product Entry</a>
+                        <a class="collapse-item" href="/DamagedProducts/Index">Damaged Product List</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrder"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-cart-plus"></i>
+                    <span>Manage Order</span>
+                </a>
+                <div id="collapseOrder" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Orders/Create">Order Entry</a>
+                        <a class="collapse-item" href="/Orders/Index">Order List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrderReturn"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-undo"></i>
+                    <span>Manage Order Return</span>
+                </a>
+                <div id="collapseOrderReturn" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/OrderReturn/Create">Order Return Entry</a>
+                        <a class="collapse-item" href="/OrderReturn/Index">Order Return List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTransaction"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Manage Transaction</span>
+                </a>
+                <div id="collapseTransaction" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Transactions/Create">Transaction Entry</a>
+                        <a class="collapse-item" href="/Transactions/Index">Transaction List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSalesReturn"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="fas fa-recycle"></i>
+                    <span>Manage Sales Return</span>
+                </a>
+                <div id="collapseSalesReturn" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/SalesReturns/Create">Sales Return Entry</a>
+                        <a class="collapse-item" href="/SalesReturns/Index">Sales Return List</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Accounts
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBank"
+                   aria-expanded="true" aria-controls="collapseBootstrap">
+                    @*<i class="far fa-credit-card"></i>*@
+                    <i class="fas fa-money-check-alt"></i>
+                    <span>Manage Bank</span>
+                </a>
+                <div id="collapseBank" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/BankDetails/Create">Bank Entry</a>
+                        <a class="collapse-item" href="/BankDetails/Index">Bank List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseExpense" aria-expanded="true"
+                   aria-controls="collapsePage">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>Manage Expense</span>
+                </a>
+                <div id="collapseExpense" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Expenses/Create">Expense Entry</a>
+                        <a class="collapse-item" href="/Expenses/Index">Expense List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIncome" aria-expanded="true"
+                   aria-controls="collapsePage">
+                    <i class="fas fa-search-dollar"></i>
+                    <span>Manage Income </span>
+                </a>
+                <div id="collapseIncome" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @*<a class="collapse-item" href="#">Income Entry</a>*@
+                        <a class="collapse-item" href="/Incomes/Index">Income List</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBalanceSheet" aria-expanded="true"
+                   aria-controls="collapsePage">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <span>Manage Balance Sheet </span>
+                </a>
+                <div id="collapseBalanceSheet" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Home/BalanceSheet">Balance Sheet</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+        </ul>
+        <!-- Sidebar -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- TopBar -->
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                 aria-labelledby="searchDropdown">
+                                <form class="navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                                               aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                <img class="img-profile rounded-circle" src="~/web/img/boy.png" style="max-width: 60px">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <span class="ml-2 d-none d-lg-inline text-white small">@User.Identity.Name</span>
+                                }
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Topbar -->
+                <!-- Container Fluid-->
+                <div class="container-fluid" id="container-wrapper">
+                    @RenderBody()
+                    <!-- Modal Logout -->
+                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+                         aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to logout?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                    <a href="#" class="btn btn-primary">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---Container Fluid-->
+            </div>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>
+                            &copy; @System.DateTime.Now.Year Powered  by <a href="https://www.neemkunibd.com/">Neemkuni Tech.</a>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer -->
+        </div>
+    </div>
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <script src="~/web/vendor/jquery/jquery.min.js"></script>
+    <script src="~/web/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/web/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/web/js/ruang-admin.min.js"></script>
+    
+</body>
+</html>

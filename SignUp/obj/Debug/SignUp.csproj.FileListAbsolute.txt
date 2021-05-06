@@ -1,0 +1,280 @@
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\ApplicationInsights.config
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\csc.exe
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\System.Collections.Immutable.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\System.Reflection.Metadata.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\vbc.exe
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\VBCSCompiler.exe
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\roslyn\VBCSCompiler.exe.config
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\SignUp.dll.config
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\SignUp.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\bin\SignUp.pdb
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.Migrations.photo.resources
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.Migrations.bankmodel.resources
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.Migrations.ModelsDateFormate.resources
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.Migrations.OrderDetailModel.resources
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.csproj.GenerateResource.cache
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.csproj.CoreCompileInputs.cache
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.csproj.CopyComplete
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.dll
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.pdb
+H:\POSMain\BackUp\PointOfSale_Tarek\SignUp\obj\Debug\SignUp.Migrations.OrderDetail.resources
+H:\POSMain\PointOfSale\SignUp\bin\ApplicationInsights.config
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\csc.exe
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\System.Collections.Immutable.dll
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\System.Reflection.Metadata.dll
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\vbc.exe
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe
+H:\POSMain\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe.config
+H:\POSMain\PointOfSale\SignUp\bin\SignUp.dll.config
+H:\POSMain\PointOfSale\SignUp\bin\SignUp.dll
+H:\POSMain\PointOfSale\SignUp\bin\SignUp.pdb
+H:\POSMain\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CoreCompileInputs.cache
+H:\POSMain\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CopyComplete
+H:\POSMain\PointOfSale\SignUp\obj\Debug\SignUp.dll
+H:\POSMain\PointOfSale\SignUp\obj\Debug\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\csc.exe
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\vbc.exe
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\ApplicationInsights.config
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\SignUp.dll.config
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\SignUp.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.AI.Web.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Net.Http.Formatting.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.Helpers.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.Http.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.Http.WebHost.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.Mvc.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.Optimization.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.Razor.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.WebPages.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Antlr3.Runtime.pdb
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\bin\System.Web.Http.Owin.xml
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\obj\Debug\SignUp.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CopyComplete
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\obj\Debug\SignUp.dll
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\obj\Debug\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.V1.resources
+C:\Users\DELL\Desktop\New folder (2)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\ApplicationInsights.config
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\csc.exe
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\vbc.exe
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\SignUp.dll.config
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\SignUp.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.AI.Web.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Net.Http.Formatting.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.Helpers.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.Http.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.Http.WebHost.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.Mvc.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.Optimization.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.Razor.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.WebPages.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Antlr3.Runtime.pdb
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\bin\System.Web.Http.Owin.xml
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\obj\Debug\SignUp.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CopyComplete
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\obj\Debug\SignUp.dll
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\obj\Debug\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.V1.resources
+C:\Users\DELL\Desktop\New folder (4)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\ApplicationInsights.config
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\csc.exe
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\vbc.exe
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\SignUp.dll.config
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\SignUp.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.V1.resources
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.OrderTransRemoveProduct.resources
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.SupplierAddCompanyId.resources
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.CompanyAddFactory.resources
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.TransRemoveTrandChange_AddDue_Customer.resources
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.TransAddDue.resources
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.ExpenseModel.resources
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CopyComplete
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.dll
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\obj\Debug\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.AI.Web.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Net.Http.Formatting.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.Helpers.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.Http.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.Http.WebHost.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.Mvc.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.Optimization.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.Razor.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.WebPages.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Antlr3.Runtime.pdb
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DELL\Desktop\New folder (6)\PointOfSale\SignUp\bin\System.Web.Http.Owin.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\ApplicationInsights.config
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\csc.exe
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\vbc.exe
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\SignUp.dll.config
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\SignUp.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\itextsharp.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\obj\Debug\SignUp.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.CopyComplete
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\obj\Debug\SignUp.dll
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\obj\Debug\SignUp.pdb
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.V1.resources
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\obj\Debug\SignUp.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.AI.Web.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Net.Http.Formatting.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.Helpers.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.Http.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.Http.WebHost.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.Mvc.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.Optimization.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.Razor.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.WebPages.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Antlr3.Runtime.pdb
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DELL\Desktop\New folder (3)\PointOfSale\SignUp\bin\System.Web.Http.Owin.xml
+H:\POSMain\PointOfSale\SignUp\obj\Debug\SignUp.Migrations.transcust.resources
+H:\POSMain\PointOfSale\SignUp\obj\Debug\SignUp.csproj.GenerateResource.cache
+H:\POSMain\PointOfSale\SignUp\obj\Debug\SignUp.csprojAssemblyReference.cache

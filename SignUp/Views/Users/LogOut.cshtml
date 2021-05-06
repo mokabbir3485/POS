@@ -1,0 +1,62 @@
+﻿
+@{ 
+    ViewBag.Title = "LogOut";
+    Layout = null; 
+    
+    }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/AngularJS/angular.js"></script>
+    <script src="~/AngularJS/angular-local-storage.min.js"></script>
+    <script src="~/AngularJS/authInterceptorService.js"></script>
+    <script src="~/AngularJS/login.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body class="main" ng-app="loginApp">
+    <div class="container-fluid" ng-controller="loginController">
+        <div class="paddingT50">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4">
+                    <!--<div class="logo1">
+    <img src="Images/logo_template.png" />
+    </div>-->
+                    <div class="container-fluid" id="container-wrapper">
+                        <!-- Modal Logout -->
+                        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabelLogout"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to logout?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-primary" ng-click="Cancel();" data-dismiss="modal">Cancel</button>
+                                        <button type="button" ng-click="Logout();" class="btn btn-outline-primary">LogOut</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="center heading1">
+            Log Out
+        </div>
+        <div class="form_Main">
+            <button type="button" ng-click="Logout();" class="btn btn-outline-primary">LogOut</button>
+            <button type="button" ng-click="Cancel();" class="btn btn-outline-primary">Cancel</button>
+        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

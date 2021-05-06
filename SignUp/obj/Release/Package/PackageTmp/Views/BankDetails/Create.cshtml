@@ -1,0 +1,123 @@
+﻿
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/BankDetail.js"></script>
+
+@section style
+    {
+    <style>
+        .form-control {
+            display: inline;
+        }
+    </style>
+}
+<div ng-app="bankDetailApp">
+    <div ng-controller="bankDetailController">
+        <div class="card mb-3  row">
+            <div class="card-body">
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-bottom:5px;">Add Bank Details</h6>
+                <table style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="BankDetail.BankName" placeholder="Bank Name">
+                            </td>
+
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="BankDetail.BankAccountNo" placeholder="Bank Account No">
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="BankDetail.BankAccountType" placeholder="Bank Account Type">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mb-3">
+                                @*<div style="float: left; padding-right: 25%;">
+            <input type="radio" name="AccountFor" value="Customer" ng-change="SetCustomerAccount" ng-model="BankDetail.AccountFor" />
+            <label for="AccountFor">Customer</label>
+        </div>
+        <div style="float: left;">
+            <input type="radio" name="AccountFor" value="Company" ng-change="SetCompanyAccount" ng-model="BankDetail.AccountFor" />
+            <label for="AccountFor">Company</label>
+        </div>*@
+                                <div class="radio" style="float: left; padding-right: 25%;">
+                                    <label><input type="radio" ng-model='AccountFor' ng-value='1' ng-change="BankDetail.AccountFor = AccountFor; SetCustomerAccount();" name="rdoResult">&nbsp;Customer</label>
+                                </div>
+                                <div class="radio" style="float: left;">
+                                    <label><input type="radio" ng-model='AccountFor' ng-value='2' ng-change="BankDetail.AccountFor = AccountFor; SetCompanyAccount();" name="rdoResult">&nbsp;Company</label>
+                                </div><br />
+
+                            </td>
+                            <td>
+                                <select class="form-control form-control-sm  mb-3" ng-model="ddlAccountRefId" ng-show="AccountFor == 1" ng-options="item.CustomerName for item in CustomerList track by item.CustomerId " ng-change="BankDetail.AccountRefId = ddlAccountRefId.CustomerId; BankDetail.AccountRefName = ddlAccountRefId.CustomerName">
+                                    <option value="">--Select Customer--</option>
+                                </select>
+                                <select class="form-control form-control-sm  mb-3" ng-model="ddlAccountRefId" ng-show="AccountFor == 2" ng-options="item.CompanyName for item in CompanyList track by item.CompanyId " ng-change="BankDetail.AccountRefId = ddlAccountRefId.CompanyId; BankDetail.AccountRefName = ddlAccountRefId.CompanyName">
+                                    <option value="">--Select Company--</option>
+                                </select>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" ng-click="AddBankDetail(BankDetail);" ng-disabled="!BankDetail.BankName || !BankDetail.BankAccountNo || !BankDetail.BankAccountType || !BankDetail.AccountFor || !AccountFor || !BankDetail.AccountRefId" class="btn btn-sm btn-outline-primary mb-1">{{btnSave}}</button>
+                                <button type="button" ng-click="ResetObject();" class="btn btn-sm btn-outline-warning mb-1">Reset</button>
+                                <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-info mb-1">List</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-top: 10px; padding-bottom: 10px;">Bank Detail List</h6>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Bank</th>
+                                <th>No</th>
+                                <th>Type</th>
+                                <th>Account For</th>
+                                <th>User</th>
+                                @*<th>Status</th>*@
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="bankDetail in BankDetailTempList">
+                                <td>{{bankDetail.BankName}}</td>
+                                <td>{{bankDetail.BankAccountNo}}</td>
+                                <td>{{bankDetail.BankAccountType}}</td>
+                                <td>{{bankDetail.AccountForName}}</td>
+                                <td>{{bankDetail.AccountRefName}}</td>
+                                @*<td ng-if="bankDetail.CustomerId != 0">{{bankDetail.CustomerName}}</td>*@
+                                @*<td ng-if="bankDetail.CompanyId != 0">{{bankDetail.Company}}</td>*@
+                                @*<td ng-if="bankDetail.Status == true">Yes</td>
+                                <td ng-if="bankDetail.Status == false">No</td>*@
+
+                                <td>
+                                    <button type="button" ng-click="Remove(bankDetail);" class="btn btn-sm btn-outline-danger mb-1">Remove</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding-top: 10px;">
+                    <button type="button" ng-click="SaveBankDetail();" ng-disabled="BankDetailTempList.length<=0" class="btn btn-sm btn-outline-primary mb-1">Submit</button>
+                    <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-warning mb-1">Cancel</button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

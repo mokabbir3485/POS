@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/SalesReturn.js"></script>
+<div ng-app="salesReturnApp">
+    <div class="row widget" ng-controller="salesReturnController">
+        <div class="col-lg-12 mb-4">
+            <div class="row-fluid hidden-print">
+                <div>
+                    <label>
+                        <select ng-model="ddlPage" id="PageId" name="PageId" class="input-mini" ng-options="page.PageNoShow for page in PageList track by page.PageId" ng-init="ddlPage.PageId =1" title="Page" data-toggle="tooltip"></select>&nbsp;records per page
+                    </label>
+                    <button class="btn btn-sm btn-outline-primary mb-1" ng-click="PrintDoc();"><i class="fas fa-print"></i> Print</button>
+                    <button type="button" disabled class="btn btn-sm btn-outline-primary mb-1"><i class="fas fa-clipboard-list"></i> Sales Return List</button>
+                    <button type="button" ng-click="AddNew();" class="btn btn-sm btn-outline-primary mb-1"><i class="far fa-plus-square"></i> Add New</button>
+                    <label style="float: right;">
+                        <i class="fab fa-searchengin"></i> Search:
+                        <input type="text" aria-controls="sample_1" ng-model="SearchItem" class="input-medium">
+                    </label>
+                </div>
+
+            </div>
+            <!-- Simple Tables -->
+            <div class="control-print">
+                <div class="table-responsive table-bordered">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                                <th>Description</th>
+                                @*<th>Status</th>*@
+                                <th class="hidden-print">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="salesReturn in SalesReturnList  | filter: SearchItem | limitTo:ddlPage.PageNo">
+                                <td>{{salesReturn.SalesReturnDate | date:'dd-MM-yyyy'}}</td>
+                                <td>{{salesReturn.SalesReturnQuantity}}</td>
+                                <td>{{salesReturn.SalesReturnAmount}}</td>
+                                <td>{{salesReturn.Description}}</td>
+                                @*<td ng-if="salesReturn.Status == true">Yes</td>
+                            <td ng-if="salesReturn.Status == false">No</td>*@
+                                <td class="hidden-print">
+                                    <button type="button" ng-click="Edit(salesReturn);" class="btn btn-sm btn-outline-primary mb-1">Edit</button>
+                                    <button type="button" ng-click="Delete(salesReturn);" class="btn btn-sm btn-outline-danger mb-1">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

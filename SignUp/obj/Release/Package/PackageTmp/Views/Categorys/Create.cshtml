@@ -1,0 +1,90 @@
+﻿
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/Category.js"></script>
+
+@section style
+    {
+    <style>
+        .form-control {
+            display: inline;
+        }
+    </style>
+}
+
+    <div ng-app="categoryApp">
+        <div ng-controller="categoryController">
+            <div class="card mb-3  row">
+                <div class="card-body">
+                    <h6 class="m-0 font-weight-bold text-primary" style="padding-bottom:5px;">Add Category</h6>
+                    <table style="width: 100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Category.CategoryName" placeholder="Category Name">
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Category.CategoryType" placeholder="Category Type">
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Category.Unit" placeholder="Unit(Ex: Kg, PC etc...)">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <button type="button" ng-click="AddCategory(Category);" ng-disabled="!Category.CategoryName || !Category.CategoryType || !Category.Unit" class="btn btn-sm btn-outline-primary mb-1">{{btnSave}}</button>
+                                    <button type="button" ng-click="ResetObject();" class="btn btn-sm btn-outline-warning mb-1">Reset</button>
+                                    <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-info mb-1">List</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h6 class="m-0 font-weight-bold text-primary" style="padding-top: 10px; padding-bottom: 10px;">Category List</h6>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Category Name</th>
+                                    <th>Category Type</th>
+                                    <th>Unit</th>
+                                    @*<th>Status</th>*@
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="category in CategoryTempList">
+                                    <td>{{category.CategoryName}}</td>
+                                    <td>{{category.CategoryType}}</td>
+                                    <td>{{category.Unit}}</td>
+                                    @*<td ng-if="category.Status == true">Yes</td>
+                                    <td ng-if="category.Status == false">No</td>*@
+
+                                    <td>
+                                        <button type="button" ng-click="Remove(category);" class="btn btn-sm btn-outline-danger mb-1">Remove</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <button type="button" ng-click="SaveCategorys();" ng-disabled="CategoryTempList.length<=0" class="btn btn-sm btn-outline-primary mb-1">Submit</button>
+                        <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-warning mb-1">Cancel</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>

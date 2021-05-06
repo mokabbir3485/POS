@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/Supplier.js"></script>
+
+@section style
+    {
+    <style>
+        .form-control {
+            display: inline;
+        }
+    </style>
+}
+<div ng-app="supplierApp">
+    <div ng-controller="supplierController">
+        <div class="card mb-3  row">
+            <div class="card-body">
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-bottom:5px;">Add Supplier</h6>
+                <table style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Supplier.SupplierName" placeholder="Supplier Name">
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Supplier.ContactNo" placeholder="Contact No">
+                            </td>
+                            <td>
+                                <select class="form-control form-control-sm  mb-3" ng-model="ddlCompany" ng-options="item.CompanyName for item in CompanyList track by item.CompanyId " ng-change="Supplier.CompanyId = ddlCompany.CompanyId;Supplier.Company = ddlCompany.CompanyName; Supplier.CompanyAddress = ddlCompany.CompanyAddress; Supplier.FactoryAddress = ddlCompany.FactoryAddress">
+                                    <option value="">--Select Company--</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        @*<tr>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Supplier.Company" placeholder="Company Name">
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Supplier.CompanyAddress" placeholder="Company Address">
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Supplier.FactoryAddress" placeholder="Factory Address">
+                            </td>
+                        </tr>*@
+                        <tr>
+                            <td>
+                                <button type="button" ng-click="AddSupplier(Supplier);" ng-disabled="!Supplier.SupplierName || !Supplier.ContactNo || !Supplier.Company || !Supplier.CompanyAddress || !Supplier.FactoryAddress || addBtnDisable" class="btn btn-sm btn-outline-primary mb-1">{{btnSave}}</button>
+                                <button type="button" ng-click="ResetObject();" class="btn btn-sm btn-outline-warning mb-1">Reset</button>
+                                <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-info mb-1">List</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-top: 10px; padding-bottom: 10px;">Supplier List</h6>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Company</th>
+                                <th>Address</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="supplier in SupplierTempList">
+                                <td>{{supplier.SupplierName}}</td>
+                                <td>{{supplier.ContactNo}}</td>
+                                <td>{{supplier.Company}}</td>
+                                <td>{{supplier.CompanyAddress}}</td>
+
+                                <td>
+                                    <button type="button" ng-click="Remove(supplier);" class="btn btn-sm btn-outline-danger mb-1">Remove</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding-top: 10px;">
+                    <button type="button" ng-click="SaveSuppliers();" ng-disabled="SupplierTempList.length<=0" class="btn btn-sm btn-outline-primary mb-1">Submit</button>
+                    <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-warning mb-1">Cancel</button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

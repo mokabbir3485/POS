@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+
+
+<script src="~/AngularJS/angular.min.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/product.js"></script>
+
+@section style
+    {
+    <style>
+        .form-control {
+            display: inline;
+        }
+    </style>
+}
+<div ng-app="productApp">
+    <div ng-controller="productController">
+        <div class="card mb-3  row">
+            <div class="card-body">
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-bottom:5px;">Add Product</h6>
+                <table style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select class="form-control form-control-sm  mb-3" style="width: 100%;" ng-model="ddlCategory" ng-options="item.CategoryName for item in CategoryList track by item.CategoryId  " placeholder="Product Name">
+                                    <option value="">--Select Category--</option>
+                                </select>
+
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="productObj.ProductName" title="Product Name" placeholder="Product Name" />
+
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="productObj.ProductNo" title="Product No." placeholder="Product No." />
+                            </td>
+                        </tr>
+                        <tr>
+                            @*<td>
+            <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="number" name="name" ng-model="productObj.OriginalPrice" title="Original Price" placeholder="Original Price " />
+
+        </td>
+        <td>
+            <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="number" name="name" ng-model="productObj.MarkupPrice" title="MRP" placeholder="MRP" />
+
+        </td>*@
+
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="productObj.Description" title="Description" placeholder="Description " />
+                            </td>
+                            @*<td>
+                                Status:
+                                <input type="checkbox" ng-model="productObj.Status" name="Status" value="Status">
+                                <label for="Status"> Acitve</label><br>
+
+                            </td>*@
+                        </tr>
+                        <tr>
+                            @*<td>
+
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="number" name="name" ng-model="productObj.ProductQty" title="QTY" placeholder="QTY" />
+                            </td>*@
+                            @*<td>
+                                Status:
+                                <input type="checkbox" ng-model="productObj.Status" name="Status" value="Status">
+                                <label for="Status"> Acitve</label><br>
+
+                            </td>*@
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" ng-click="addProduct();" ng-disabled="!productObj.ProductName || !productObj.ProductNo || !productObj.Description" class="btn btn-sm btn-outline-primary mb-1">{{btnSave}}</button>
+                                <button type="button" ng-click="ResetObject();" class="btn btn-sm btn-outline-warning mb-1">Reset</button>
+                                <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-info mb-1">List</button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-top: 10px; padding-bottom: 10px;">Product List</h6>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Product No</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Original Price</th>
+                                <th>MRP</th>
+                                <th>Qty</th>
+                                @*<th>Status</th>*@
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="product in AddproductList">
+                                <td>{{product.ProductNo}}</td>
+                                <td>{{product.ProductName}}</td>
+                                <td>{{product.Description}}</td>
+                                <td>{{product.OriginalPrice}}</td>
+                                <td>{{product.MarkupPrice}}</td>
+                                <td>{{product.ProductQty}}</td>
+                                @*<td>{{product.Status}}</td>*@
+                                <td>
+                                    <button class="btn btn-sm btn-outline-danger mb-1" ng-click="removebtn(product)">Remove</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <button class="btn btn-primary" ng-disabled="AddproductList.length<=0" ng-click="ProductSave()">Save</button>
+                    <button class="btn btn-primary" ng-click="resetProduct()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        @* //////////////////////////////////////////////////////////
+
+        <form novalidate name="f1" ng-submit="SaveFile()">
+            <div style="color: red">{{Message}}</div>
+            <table>
+                <tr>
+                    <td>Select File : </td>
+                    <td>
+                        <input type="file" name="file" accept="image/*" onchange="angular.element(this).scope().selectFileforUpload(this.files)" required />
+                        <span class="error" ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.file.$error.required">Image required!</span>
+                        <span class="error">{{FileInvalidMessage}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description : </td>
+                    <td>
+                        <input type="text" name="uFileDescription" ng-model="FileDescription" class="{{(IsFormSubmitted?'ng-dirty' + (f1.uFileDescription.$invalid?' ng-invalid':''):'')}}" autofocus />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Upload File" />
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+        *@
+
+    </div>
+</div>

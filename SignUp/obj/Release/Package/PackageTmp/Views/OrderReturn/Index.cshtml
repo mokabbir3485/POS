@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/OrderReturn.js"></script>
+<div ng-app="orderReturnApp">
+    <div class="row widget" ng-controller="orderReturnController">
+        <div class="col-lg-12 mb-4">
+
+            <div class="row-fluid hidden-print">
+                <div>
+                    <label>
+                        <select ng-model="ddlPage" id="PageId" name="PageId" class="input-mini" ng-options="page.PageNoShow for page in PageList track by page.PageId" ng-init="ddlPage.PageId =1" title="Page" data-toggle="tooltip"></select>&nbsp;records per page
+                    </label>
+                    <button class="btn btn-sm btn-outline-primary mb-1" ng-click="PrintDoc();"><i class="fas fa-print"></i> Print</button>
+                    <button type="button" disabled class="btn btn-sm btn-outline-primary mb-1"><i class="fas fa-clipboard-list"></i> Order Return List</button>
+                    <button type="button" ng-click="AddNew();" class="btn btn-sm btn-outline-primary mb-1"><i class="far fa-plus-square"></i> Add New</button>
+                    <label style="float: right;">
+                        <i class="fab fa-searchengin"></i> Search:
+                        <input type="text" aria-controls="sample_1" ng-model="SearchItem" class="input-medium">
+                    </label>
+                </div>
+
+            </div>
+            <!-- Simple Tables -->
+            <div class="control-print">
+                <div class="table-responsive table-bordered">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                                <th>Description</th>
+                                @*<th>Status</th>*@
+                                <th class="hidden-print">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="orderReturn in OrderReturnList | filter: SearchItem | limitTo:ddlPage.PageNo">
+                                <td>{{orderReturn.OrderReturnDate | date:'dd-MM-yyyy'}}</td>
+                                <td>{{orderReturn.OrderReturnQuantity}}</td>
+                                <td>{{orderReturn.OrderReturnAmmount}}</td>
+                                <td>{{orderReturn.Description}}</td>
+                                @*<td ng-if="orderReturn.Status == true">Yes</td>
+                            <td ng-if="orderReturn.Status == false">No</td>*@
+                                <td class="hidden-print">
+                                    <button type="button" ng-click="Edit(orderReturn);" class="btn btn-sm btn-outline-primary mb-1">Edit</button>
+                                    <button type="button" ng-click="Delete(orderReturn);" class="btn btn-sm btn-outline-danger mb-1">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

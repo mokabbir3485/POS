@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/Home.js"></script>
+<link href="~/web/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="~/web/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="~/web/css/ruang-admin.min.css" rel="stylesheet">
+<link href="~/Content/page.css" rel="stylesheet" />
+
+<div ng-app="homeApp">
+    <div class="row widget" ng-controller="homeController">
+        
+        <div class="col-lg-12 mb-4">
+            @*<div class="maindiv">
+
+        </div>*@
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="~/web/img/bornil logo 07 png.png" style="height:300px; width: 100%;"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <h3 style="text-align: center;">Daily Cost and Profit</h3>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <table>
+                        <tr>
+                            <td>
+                                <span style="padding:8px;"><b>Start Date</b></span>
+                            </td>
+                            <td>
+                                <span style="padding:8px;"><b>End Date</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="startdate" class="form-control form-control-sm  mb-3" style="width: 100%;" type="date" name="name" ng-model="home.startdate" title="Start Date" placeholder="Start Date" />
+                            </td>
+                            <td>
+                                <input id="enddate" class="form-control form-control-sm  mb-3" style="width: 100%;" type="date" name="name" ng-model="home.enddate" title="End Date" placeholder="End Date" />
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" ng-click="getDetails(home);" ng-disabled="!home.startdate || !home.enddate" style="width:100%;" class="btn btn-sm btn-outline-primary mb-1">Load Details</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>
+                                <span style="padding:8px;"><b>Orders Cost: {{OrdersCost}}</b></span>
+                            </td>
+                            <td>
+                                <span style="padding:8px;"><b>Others Cost: {{OthersCost}}</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="padding:8px;"><b>Total Sales: {{TotalSales}}</b></span>
+                            </td>
+                            <td>
+                                <span style="padding:8px;"><b>Total Profit: {{TotalProfit}}</b></span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+               
+            </div>
+            @*<div class="row">
+            <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                    <tr>
+                        <td>
+                            <span style="padding:8px;"><b>Orders Cost: {{OrdersCost}}</b></span>
+                        </td>
+                        <td>
+                            <span style="padding:8px;"><b>Others Cost: {{OthersCost}}</b></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="padding:8px;"><b>Total Sales: {{TotalSales}}</b></span>
+                        </td>
+                        <td>
+                            <span style="padding:8px;"><b>Total Profit: {{TotalProfit}}</b></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>*@
+        </div>
+    </div>
+</div>
+
+
+
+
+

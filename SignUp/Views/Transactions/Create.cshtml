@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+
+
+<script src="~/AngularJS/angular.min.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/jquery-2.2.3.min.js"></script>
+<script src="~/AngularJS/jquery-ui.js"></script>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<script src="~/AngularJS/Transaction.js"></script>
+
+@section style
+    {
+    <style>
+        .form-control {
+            display: inline;
+        }
+    </style>
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+}
+<div ng-app="transactionApp">
+    <div ng-controller="transactionController">
+        <div class="card mb-3  row">
+            <div class="card-body">
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-bottom:5px;">Add Transaction</h6>
+                <table style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.InvoiceNo" title="Transaction No." placeholder="Transaction No." />
+
+                            </td>
+                            <td>
+                                <input id="transactionDate" class="form-control form-control-sm  mb-3" style="width: 100%;" type="date" name="name" ng-model="Transaction.TransactionDate" ng-change="disSave();" title="Transaction Date" placeholder="Transaction Date" />
+                            </td>
+                            <td>
+                                <select class="form-control form-control-sm  mb-3" style="width: 100%;" ng-model="ddlCustomer" ng-options="customer.CustomerName for customer in CustomerList track by customer.CustomerId  " ng-change="Transaction.CustomerName = ddlCustomer.CustomerName;" title="Customer Name" placeholder="Customer Name">
+                                    <option value="">--Select Customer--</option>
+                                </select>
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <select class="form-control form-control-sm  mb-3" style="width: 100%;" ng-model="ddlProduct" ng-options="item.ProductName for item in productList track by item.ProductId  " ng-change="checkQty();" title="Product Name" placeholder="Product Name">
+                                    <option value="">--Select Product--</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="itemQty" ng-change="btnDisable();" title="Item QTY" placeholder="Item QTY" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button type="button" ng-click="addProduct();" ng-disabled="disableBtnAddProduct;" class="btn btn-sm btn-outline-primary mb-1">{{btnSave}}</button>
+                                <button type="button" ng-click="ResetObject();" class="btn btn-sm btn-outline-warning mb-1">Reset</button>
+                                <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-info mb-1">List</button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>MRP</th>
+                                <th>Qty</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="product in AddproductList">
+                                <td>{{product.ProductName}}</td>
+                                <td>{{product.MarkupPrice}}</td>
+                                <td>{{product.ProductQty}}</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-outline-danger mb-1" ng-click="removebtn(product)">Remove</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding-top: 10px;">
+                    <table style="width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.TransactionQty" title="Transaction Qty" placeholder="Transaction Qty " readonly />
+
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.SubTotal" title="Sub Total" placeholder="Sub Total" readonly />
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.Due" title="Due" placeholder="Due" readonly />
+                                </td>
+                                @*<td>
+                                        Status:
+                                        <input type="checkbox" ng-model="Transaction.Status" name="Status" value="Status">
+                                        <label for="Status"> Acitve</label><br>
+
+                                    </td>*@
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" ng-disabled="disableVat" style="width: 100%;" type="text" name="name" ng-model="Transaction.TransVat" ng-change="CalculetionForVat();" title="Vat (Tk/%)" placeholder="Vat (Tk/%)" />
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.TransDiscount" ng-change="CalculetionForDiscount();" title="Discount (Tk)" placeholder="Discount (Tk)" />
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.TotalAmount" title="Total Amount" placeholder="Total Amount" readonly />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="radio" style="float: left; padding-right: 25%;">
+                                        <label><input type="radio" ng-model='PaymentType' ng-value='1' ng-change="Transaction.PaymentType = PaymentType; SetCheque();" name="rdoResult">&nbsp;Bank Cheque/Card</label>
+                                    </div>
+                                    <div class="radio" style="float: left;">
+                                        <label><input type="radio" ng-model='PaymentType' ng-value='2' ng-change="Transaction.PaymentType = PaymentType; SetCash();" name="rdoResult">&nbsp;Cash Tk.</label>
+                                    </div><br />
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm  mb-3" ng-model="ddlBankDetail" ng-show="PaymentType == 1" ng-options="bank.BankAccountNo for bank in BankDetailList track by bank.BankId " ng-change="Transaction.BankId = ddlBankDetail.BankId; Transaction.BankName = ddlBankDetail.BankName; Transaction.BankAccountNo = ddlBankDetail.BankAccountNo">
+                                        <option value="">--Select Bank--</option>
+                                    </select>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.TenderedAmount" ng-change="changedAmountCal();" ng-show="PaymentType == 2" title="Tendered Amount" placeholder="Tendered Amount" />
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.BankName" ng-show="PaymentType == 1" title="Bank Name" placeholder="Bank Name" readonly />
+
+                                    <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="Transaction.Change" ng-show="PaymentType == 2" title="Change Amount" placeholder="Change Amount" readonly />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <button class="btn btn-primary" ng-disabled="AddproductList.length<=0 || !Transaction.InvoiceNo || disDate" ng-click="TransactionSave()">Save</button>
+                    <button class="btn btn-primary" ng-click="ResetObject()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

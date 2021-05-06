@@ -1,0 +1,151 @@
+﻿
+@{
+    Layout = null;
+}
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/TransactionReport.js"></script>
+<link href="~/web/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="~/web/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="~/web/css/ruang-admin.min.css" rel="stylesheet">
+<link href="~/Content/page.css" rel="stylesheet" />
+<div ng-app="transactionReportApp">
+    <div class="row widget" ng-controller="transactionReportController">
+        <div class="container row">
+            <div class="col-md-12">
+                <div class="hidden-print">
+
+                    <div class="row">
+                        <div>
+                            <button type="button" onclick="PrintPdf();" class="customBtn custmoBtnReset" style="border-radius: 3px; margin:5px" title="Print To .PDF">
+                                <i class="fa fa-print"></i>&nbsp;Print
+                            </button>
+                        </div>
+
+
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container" id="source-html">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <p style="font-size: 22px; text-align: center;"><b>বর্ণিল</b></p>
+                    </div>
+                    <div>
+                        <p style="font-size: 14px; text-align: center;">26, Baddanagar lane, Hazaribagh, Dhaka</p>
+                        <p style="font-size: 14px; text-align: center;">Phone: 01735154961, Email: bornil013@gmail.com</p>
+                    </div>
+                    <br />
+                    <div>
+                        <table style="text-align: center;margin-left:auto;margin-right:auto;" border="1">
+                            <tr>
+                                <td style="width: 250px;">
+                                    <p style="font-size: 18px; text-align: center;margin-top:6px; "><b>TRANSACTION INVOICE</b></p>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="col-md-12">
+                <table style="width:100%">
+                    <tr>
+                        <td style="text-align:left">
+                            <p><strong>Invoice NO: {{TransactionReport.InvoiceNo}}</strong></p>
+                        </td>
+                        <td style="text-align:right">
+                            <p><strong>Invoice Date: {{transactiondateReport}}</strong></p>
+                        </td>
+                    </tr>
+                </table>
+                <p><strong>Name: {{Customer.CustomerName}}</strong></p>
+                <p><strong>Address: {{Customer.CustomerAddress}}</strong></p>
+                <p><strong>Phone: {{Customer.CustomerPhone}}</strong></p>
+
+            </div>
+
+
+
+            <div class="col-md-12">
+                <div class="row">
+                    <table border="1" style="height:100%;width:100%">
+                        <thead>
+                            <tr style="text-align:center;">
+                                <th scope="col" style="text-align:center;">
+                                    Sl. No.
+                                </th>
+                                <th scope="col" style="text-align:center;">
+                                    Product Name
+                                </th>
+                                <th scope="col" style="text-align:center;">
+                                    Qty
+                                </th>
+                                <th scope="col" style="text-align:center;">
+                                    MRP
+                                </th>
+                                <th scope="col" style="text-align:center;">
+                                    Amount
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="aProduct in AddproductList">
+                                <td style="text-align: center; border-top:none; border-bottom:none;">{{$index +1}}</td>
+
+                                <td style="text-align: center; border-top:none; border-bottom:none;">{{aProduct.ProductName}}</td>
+                                <td style="text-align: center; border-top:none; border-bottom:none;">{{aProduct.ProductQty}}</td>
+                                <td style="text-align: center; border-top:none; border-bottom:none;">{{aProduct.MarkupPrice}}</td>
+                                <td style="text-align: center; border-top:none; border-bottom:none;">{{aProduct.ProductAmount}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="text-align:center;"></td>
+                                <td style="text-align:center;"></td>
+                                <td style="text-align:center;"></td>
+                                <td style="text-align:center;">
+                                    Total:
+                                </td>
+                                <td style="text-align:center;">{{TotalAmountReport}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div style="text-align:right">
+                    <p><b>Signature</b></p>
+                </div>
+            </div>
+            <table id="footer" style="width: 100%; position:fixed; bottom:0;">
+                <tbody style="left:30px; right: 50px;">
+                    <tr>
+                        <td style="text-align:left;font-size: small;">
+                            <div class="footer">
+                                <span><b>{{currentDatetimeFormated}}</b></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    function PrintPdf() {
+
+        window.print();
+
+    }
+</script>

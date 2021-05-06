@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+
+
+<script src="~/AngularJS/angular.min.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/jquery-2.2.3.min.js"></script>
+<script src="~/AngularJS/jquery-ui.js"></script>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<script src="~/AngularJS/DamagedProduct.js"></script>
+
+@section style
+    {
+    <style>
+        .form-control {
+            display: inline;
+        }
+    </style>
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+}
+<div ng-app="damagedProductApp">
+    <div ng-controller="damagedProductController">
+        <div class="card mb-3  row">
+            <div class="card-body">
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-bottom:5px;">Add Damaged Product</h6>
+                <table style="width: 100%">
+                    <tbody>
+                        
+                        <tr>
+                            <td>
+                                <input id="damagedDate" class="form-control form-control-sm  mb-3" style="width: 100%;" type="date" name="name" ng-model="DamagedProduct.DamagedDate" ng-change="disSave();" title="Damaged Date" placeholder="Damaged Date" />
+                            </td>
+                            <td>
+                                <select class="form-control form-control-sm  mb-3" style="width: 100%;" ng-model="ddlProduct" ng-options="item.ProductName for item in productList track by item.ProductId" ng-change="checkQty();" title="Product Name" placeholder="Product Name">
+                                    <option value="">--Select Product--</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-disabled="disableTxtQty" ng-model="itemQty" ng-change="btnDisable();" title="Item QTY" placeholder="Item QTY" />
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" name="name" ng-model="DamagedProduct.Description" title="Description" placeholder="Description" />
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button type="button" ng-click="addProduct();" ng-disabled="disableBtnAddProduct;" class="btn btn-sm btn-outline-primary mb-1">{{btnSave}}</button>
+                                <button type="button" ng-click="ResetObject();" class="btn btn-sm btn-outline-warning mb-1">Reset</button>
+                                <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-info mb-1">List</button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Original Price</th>
+                                <th>Qty</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="product in AddproductList">
+                                <td>{{product.ProductName}}</td>
+                                <td>{{product.OriginalPrice}}</td>
+                                <td>{{product.ProductQty}}</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-outline-danger mb-1" ng-click="removebtn(product)">Remove</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    TotalQty: {{DamagedProduct.TotalQuantity}} <br />
+                    TotalAmount: {{DamagedProduct.TotalAmount}}<br />
+                </div>
+                <div>
+                    <button class="btn btn-primary" ng-disabled="AddproductList.length<=0 || disDate" ng-click="DamagedProductSave()">Save</button>
+                    <button class="btn btn-primary" ng-click="ResetAll()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

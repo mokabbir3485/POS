@@ -1,0 +1,108 @@
+﻿
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PointOfSaleLayout.cshtml";
+}
+
+<script src="~/AngularJS/angular.js"></script>
+<script src="~/AngularJS/angular-local-storage.min.js"></script>
+<script src="~/AngularJS/authInterceptorService.js"></script>
+<script src="~/AngularJS/Expense.js"></script>
+
+@section style
+    {
+    <style>
+        .form-control {
+            display: inline;
+        }
+    </style>
+}
+<div ng-app="expenseApp">
+    <div ng-controller="expenseController">
+        <div class="card mb-3  row">
+            <div class="card-body">
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-bottom:5px;">Add Expenses</h6>
+                <table style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td class="mb-3">
+                                <div class="radio" style="float: left;">
+                                    <label><input type="radio" ng-model='ExpenseType' ng-value='1' ng-change="Expense.ExpenseType = ExpenseType; SetExpenseTypeOthers();" name="rdoResult">&nbsp;Expense Type Others</label>
+                                </div>
+                                <div class="radio" style="float: right; padding-right: 25%;">
+                                    <label><input type="radio" ng-model='ExpenseType' ng-value='2' ng-change="SetExpenseTypeOrders();" name="rdoResult">&nbsp;Expense Type Orders</label>
+                                </div><br />
+                            </td>
+                            <td>
+                                <select class="form-control form-control-sm  mb-3" ng-model="ddlOrder" ng-show="ExpenseType == 2" ng-options="item.OrderNo for item in OrderList track by item.OrdedrId" ng-change="Expense.OrdedrId = ddlOrder.OrdedrId; Expense.OrderNo = ddlOrder.OrderNo; Expense.Amount = ddlOrder.OrderTotal; Expense.ExpenseDate = ddlOrder.OrderDate; getOrderDate();">
+                                    <option value="">--Select Order No--</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Expense.Description" placeholder="Description">
+                            </td>
+                            <td>
+                                <input id="expenseDate" class="form-control form-control-sm  mb-3" style="width: 100%;" type="date" name="name" ng-model="Expense.ExpenseDate" title="Expense Date" placeholder="Expense Date" />
+                            </td>
+                            <td>
+                                <input class="form-control form-control-sm  mb-3" style="width: 100%;" type="text" ng-model="Expense.Amount" placeholder="Amount">
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button type="button" ng-click="AddExpense(Expense);" ng-disabled="!Expense.Description || !Expense.Amount || !Expense.ExpenseType" class="btn btn-sm btn-outline-primary mb-1">{{btnSave}}</button>
+                                <button type="button" ng-click="ResetObject();" class="btn btn-sm btn-outline-warning mb-1">Reset</button>
+                                <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-info mb-1">List</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h6 class="m-0 font-weight-bold text-primary" style="padding-top: 10px; padding-bottom: 10px;">Expense List</h6>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Expense Type</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Order No</th>
+                                @*<th>Status</th>*@
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="expense in ExpenseTempList">
+                                <td>{{expense.ExpenseType}}</td>
+                                <td>{{expense.Description}}</td>
+                                <td>{{expense.Amount}}</td>
+                                <td>{{expense.OrderNo}}</td>
+                                @*<td ng-if="bankDetail.Status == true">Yes</td>
+                                    <td ng-if="bankDetail.Status == false">No</td>*@
+
+                                <td>
+                                    <button type="button" ng-click="Remove(bankDetail);" class="btn btn-sm btn-outline-danger mb-1">Remove</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding-top: 10px;">
+                    <button type="button" ng-click="SaveExpense();" ng-disabled="ExpenseTempList.length<=0" class="btn btn-sm btn-outline-primary mb-1">Submit</button>
+                    <button type="button" ng-click="RedirectToList();" class="btn btn-sm btn-outline-warning mb-1">Cancel</button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
